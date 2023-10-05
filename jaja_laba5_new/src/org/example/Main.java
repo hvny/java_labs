@@ -20,7 +20,7 @@ public class Main {
                 "hare"};
 
         Map<String, Integer> counter = new HashMap<>(); //словарь (слово: кол-во)
-        List<String> duplicates= new ArrayList<>();  //список повторяющихся слов
+        //List<String> duplicates= new ArrayList<>();  //список повторяющихся слов
 
         for(int i=0;i<words.length;i++){
             if(!counter.containsKey(words[i])){    //если counter не содержит слово из массива, то добавляем это слово
@@ -32,16 +32,15 @@ public class Main {
         }
 
         System.out.println("Words and their's quantity: ");
+        /*
         for (Map.Entry<String, Integer> o : counter.entrySet()) {
-            System.out.println(o.getKey() + ": " + o.getValue());    //вывод counter
+            //System.out.println(counter.entrySet());    //вывод counter
 
-            if (o.getValue() > 1){              //добавляем дупликаты в список
-                duplicates.add(o.getKey());
-            }
-        }
+        }*/
+        System.out.println(counter.entrySet());
 
-        String listString = String.join(", ", duplicates);
-        System.out.println("\nDuplicates: " + listString + "\n--------------------");
+       // String listString = String.join(", ", duplicates);
+       // System.out.println("\nDuplicates: " + listString + "\n--------------------");
 
         //--------------------------------------------------------------------------
 
@@ -57,6 +56,7 @@ public class Main {
         book1.add("Smith", "83333333333");
         book1.add("Trump", "88888888880");
 
+        book1.add("Obama", "98978907754");
         book1.add("Obama", "98978907754");
         book1.add("Obama", "98978907754");
 

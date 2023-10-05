@@ -26,21 +26,11 @@ public class Box<Obj extends Fruit> {
     }
 
     public void compare(Box anotherBox) {        //сравниваем две коробки
-        if ((Objects.equals(anotherBox.getTypeOfFruit(), "org.example.Banana")
-                && Objects.equals(this.getTypeOfFruit(), "org.example.Banana"))
-                ||
-                (!Objects.equals(anotherBox.getTypeOfFruit(), "org.example.Banana")
-                && !Objects.equals(this.getTypeOfFruit(), "org.example.Banana"))) {
-
-            if(getWeight() == anotherBox.getWeight()) {
-                System.out.println("True");
-            }
-            else{
-                System.out.println("False");
-            }
+        if(getWeight() == anotherBox.getWeight()) {
+            System.out.println("True");
         }
-        else {
-            System.out.println("Нельзя сравнивать коробку с бананами с другими коробками");
+        else{
+            System.out.println("False");
         }
     }
 

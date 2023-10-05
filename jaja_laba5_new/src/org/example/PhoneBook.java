@@ -2,19 +2,18 @@ package org.example;
 import java.math.BigInteger;
 import java.util.*;
 public class PhoneBook {
-    private Map<String, ArrayList<String>> phonebook;
+    private Map<String, TreeSet<String>> phonebook;
     PhoneBook() {
         phonebook = new TreeMap<>();
     }
 
 
     public void printBook() {
-
         phonebook.forEach((key, value) -> System.out.println(key + " " + value));
     }
 
     public void add(String surname, String number) {
-        ArrayList<String> ListOfNumbers = new ArrayList<>();
+        TreeSet<String> ListOfNumbers = new TreeSet<>();
         ListOfNumbers.add(number);
 
         if (!phonebook.containsKey(surname)){         //если книга не содержит фамилию, то добавляем пару
@@ -26,8 +25,9 @@ public class PhoneBook {
             }
             else {
                 phonebook.get(surname).add(number);
-                Collections.sort(phonebook.get(surname));
             }
+            //phonebook.get(surname).add(number);
+
         }
     }
 
@@ -36,7 +36,7 @@ public class PhoneBook {
             System.out.println("Surname '" + Surname + "' doesn't exist in phonebook.");
         }
         else {
-            for (Map.Entry<String, ArrayList<String>> temp : phonebook.entrySet()) {
+            for (Map.Entry<String, TreeSet<String>> temp : phonebook.entrySet()) {
                 if(temp.getKey().equals(Surname)) {                                //если ключ == нужная фамилия
                     System.out.println(temp.getKey() + " : " + temp.getValue());
                 }

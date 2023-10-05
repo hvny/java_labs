@@ -21,15 +21,19 @@ public class Main {
         for (int i = 0; i < 2; i++){
             orangeBox1.addFruit(new Orange());
         }
+        BananaBox<Banana> bananaBox3 = new BananaBox<>(); //коробка с бананами
 
-        Box<Banana> bananaBox1 = new Box<>(); //коробка с бананами
+        BananaBox<Banana> bananaBox1 = new BananaBox<>(); //коробка с бананами
         bananaBox1.addFruit(new Banana());
 
-        Box<Banana> bananaBox2 = new Box<>(); //вотрая коробка с бананами
+        BananaBox<Banana> bananaBox2 = new BananaBox<>(); //вотрая коробка с бананами
+        bananaBox2.addFruit(new Banana());
         bananaBox2.addFruit(new Banana());
 
-        Box<Orange> orangeBox2 = new Box<>();       //вторая коробка с апельсинами
+        //System.out.println(bananaBox2.getWeight());
 
+        Box<Orange> orangeBox2 = new Box<>();       //вторая коробка с апельсинами
+        /*
         System.out.println("\nВес коробки appleBox1: " + appleBox1.getWeight());
         System.out.println("Вес коробки orangeBox1: " + orangeBox1.getWeight());
 
@@ -40,14 +44,15 @@ public class Main {
         System.out.println("\nФрукты из orangeBox1 пересыпаны в orangeBox2");
         System.out.println("Вес коробки orangeBox1: " + orangeBox1.getWeight() + "\t\tВес коробки orangeBox2: " + orangeBox2.getWeight());
         System.out.println("\nСодержимое коробки orangeBox2: ");
-        orangeBox2.printBox();
+        orangeBox2.printBox();*/
 
 
         System.out.println("\nСравнили вес коробок bananaBox1 и bananaBox2: ");
         bananaBox1.compare(bananaBox2);
+        appleBox1.compare(orangeBox1);
 
         System.out.println("\nСравнили вес коробок appleBox1 и bananaBox2: ");
-        appleBox1.compare(bananaBox2);
+       // bananaBox1.compare(appleBox1);
     }
 
     public static void swap(Object[] arr, int index1, int index2){   //task1
