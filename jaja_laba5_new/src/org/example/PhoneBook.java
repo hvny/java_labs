@@ -26,8 +26,6 @@ public class PhoneBook {
             else {
                 phonebook.get(surname).add(number);
             }
-            //phonebook.get(surname).add(number);
-
         }
     }
 

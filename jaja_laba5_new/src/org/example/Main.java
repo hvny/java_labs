@@ -62,7 +62,6 @@ public class Main {
 
         book1.add("Obama", "80000000000");
 
-        //book1.add("Trump", "9090909090");
         book1.get("Trump");
         book1.get("Johnson");
         book1.get("Smith");
