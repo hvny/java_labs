@@ -47,17 +47,21 @@ public class Main {
 
         PhoneBook book1 = new PhoneBook();
 
-        book1.add("Johnson", "811111111111");
-        book1.add("Johnson", "844444444444");
-        book1.add("Johnson", "99999");
+
+        book1.add("Johnson", "84444444444");
+        book1.add("Johnson", "89999999999");
+        book1.add("Johnson", "81111111111");
+        book1.add("Smith", "83333333333");
+        book1.add("Smith", "72222222222");
         book1.add("Smith", "82222222222");
-        book1.add("Smith", "833333333333");
-        book1.add("Trump", "8888888888");
+        book1.add("Smith", "83333333333");
+        book1.add("Trump", "88888888880");
 
-        book1.add("Obama", "9897897754");
-        book1.add("Obama", "123");
+        book1.add("Obama", "98978907754");
+        book1.add("Obama", "98978907754");
 
-        book1.add("Obama", "9897897754");
+        book1.add("Obama", "80000000000");
+
         //book1.add("Trump", "9090909090");
         book1.get("Trump");
         book1.get("Johnson");
